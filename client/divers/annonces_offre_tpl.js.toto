@@ -1,0 +1,10 @@
+
+Template.annonces_offre_tpl.ctx_annonces_offre = function () {
+  	console.log("-- Template.annonces_offre_tpl.ctx_annonces_offre --");
+    return Annonces.find({objet: 'offre'});
+  };
+
+  Template.annonces_offre_tpl.ctx_annonces_offre_count = function () {
+    console.log("-- Template.annonces_offre_tpl.ctx_annonces_offre_count --");
+    return Annonces.find({objet: 'offre'}).count();
+  };

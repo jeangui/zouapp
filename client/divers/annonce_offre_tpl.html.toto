@@ -1,0 +1,12 @@
+<template name="annonces_offre_tpl">
+	<div class="container">
+	<div class="hero-unit">
+		<h1>Les offres ({{ctx_annonces_offre_count}})...</h1>
+	</div>	
+	<ul id="item-list" class="thumbnails">
+	{{#each ctx_annonces_offre}}
+		{{> annonce_tpl}}
+	{{/each}}
+	</ul>
+	</div>
+</template>

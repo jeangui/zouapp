@@ -1,0 +1,15 @@
+<template name="transactions_offre_tpl">
+	<div class="container">
+
+		<div class="well">
+			<h3 style="color: grey">Les offres ({{ctx_transactions_offre_count}})...</h3>
+		</div>
+
+		<ul id="item-list" class="thumbnails">
+		{{#each ctx_transactions_offre}}
+			{{> transaction_tpl}}
+		{{/each}}
+		</ul>
+		
+	</div>
+</template>

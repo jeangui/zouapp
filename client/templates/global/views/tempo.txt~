@@ -1,0 +1,185 @@
+<!--
+	<div class="container">
+		<div id="myCarousel" class="carousel slide">
+		
+		  <div class="carousel-inner">
+		    <div class="active item"><img src="http://archive.oapd.inaf.it/othersites/altrimondi/prot02_083/Comete-file/cometehalley1986.gif"></div>
+		    <div class="item"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcRzh6CTffaivDqilJbrEmGs1IZxUskYkN_8y_gJ9kv4kHiRKfpMEw&t=1"></div>
+		    <div class="item"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Comet_Hale-Bopp_1995O1.jpg/600px-Comet_Hale-Bopp_1995O1.jpg"></div>
+		  </div>
+		
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+	<div class="hero-unit">
+		<div class="container">
+			<div class="row">
+				<div class="span9">
+					<div class="well">
+						<h2>Créer votre annonce</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="span3">
+		    	    <form class="well form-inline">
+					    <legend>
+					    	<h3>... d'information</h3>
+					    </legend>
+					    <a href="#demandeInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+					    <a href="#offreInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+				    </form>
+			    </div>
+			    <div class="span3">
+			    	<form class="well form-inline">
+					    <legend>
+					    	<h3>... de service</h3>
+					    </legend>
+					    <a href="#demandeServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+					    <a href="#offreServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+				    </form>
+			    </div>
+			    <div class="span3">
+			    	<form class="well form-inline">
+					    <legend>
+					    	<h3>...de bien</h3>
+					    </legend>
+					    <a href="#demandeBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+					    <a href="#offreBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+				    </form>
+			    </div>
+				
+			</div>	
+
+		</div>
+	</div>
+-->
+
+	<div class="modal" id="demandeInformationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Modal header</h3>
+		</div>
+		<div class="modal-body">
+			<p>One fine body…</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="btn btn-primary">Save changes</button>
+		</div>
+	</div>
+
+<!--	
+	<div id="#demandeInformationModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre demande d'information</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    
+    <div id="#offreInfoModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre offre d'information</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#demandeServiceModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre demande de service</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#offreServiceModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre offre de service</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#demandeBienModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre demande de bien</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#offreBienModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre offre de bien</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+-->

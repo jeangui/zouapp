@@ -1,0 +1,95 @@
+<template name="onglets_tpl">
+
+	<div class="container">
+      <div class="row">
+        <div class="span2">
+          <img src="postit.png" float="left">
+        </div>
+        <div class="span10">
+          <div class="well">
+          <strong>Plateforme</strong> permettant aux <strong>demandeurs de services</strong> et aux <strong>fournisseurs de services</strong> de se trouver et d'interagir efficacement <br>
+          <ul>
+            <li>
+              en <strong>temps réel</strong>,
+            </li>
+            <li>
+              via un <strong>filtrage temporel</strong> (planning, plage de d'activité),
+            </li>
+            <li>
+              via un <strong>filtrage géographique</strong> (mes lieux d'intérêt : fixe, mobile),
+            </li>
+            <li>
+              via un <strong>filtrage thématique</strong> (abonnement à des centres d'intérêts)
+            </li>
+            <li>
+              et via un <strong>filtrage "social"</strong> (tel fournisseur bien noté par mes amis).
+            </li> 
+          </ul>
+          Ce canal de communication innovant peut également être utilisé pour déposer des <strong>petites-annonces classiques</strong> de ventes et d'achats de biens (immobilier, voiture, troc, location, etc...) mais également comme outil de <strong>publication d'information</strong> (news, annonces, alertes, questions, etc...).
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tabbable span12">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tabs1-pane1" data-toggle="tab"><h3>Place de marché</h3></a></li>
+            {{#if currentUser}}
+            <li><a href="#tabs1-pane2" data-toggle="tab"><h3>Mes services</h3></a></li>
+            <li><a href="#tabs1-pane3" data-toggle="tab"><h3>Mes Transactions</h3></a></li>
+            <li><a href="#tabs1-pane4" data-toggle="tab"><h3>Mes centres d'intérêts</h3></a></li>
+            <li><a href="#tabs1-pane5" data-toggle="tab"><h3>Mes amis</h3></a></li>
+            <li><a href="#tabs1-pane6" data-toggle="tab"><h3>Mon planning</h3></a></li>
+            <li><a href="#tabs1-pane7" data-toggle="tab"><h3>Mes préférences</h3></a></li>
+            {{/if}}
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabs1-pane1">
+
+              	{{> annonces_demande_tpl}}
+		
+				        {{> annonces_offre_tpl}}
+
+            </div>
+            {{#if currentUser}}
+            <div class="tab-pane" id="tabs1-pane2">
+       
+              	{{> mesannonces_demande_tpl}}
+    
+                {{> mesannonces_offre_tpl}}
+
+            </div>
+            <div class="tab-pane" id="tabs1-pane3">
+              
+                {{> transactions_demande_tpl}}
+
+                {{> transactions_offre_tpl}}
+
+            </div>
+            <div class="tab-pane" id="tabs1-pane4">
+              <h4>Mes Amis</h4>
+              <p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis. Suspendisse potenti. Ut porta rhoncus ligula, sed fringilla felis feugiat eget. In non purus quis elit iaculis tincidunt. Donec at ultrices est.</p>
+            </div>
+            <div class="tab-pane" id="tabs1-pane5">
+              <h4>Mes Demandes de Services</h4>
+              <p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis. Suspendisse potenti. Ut porta rhoncus ligula, sed fringilla felis feugiat eget. In non purus quis elit iaculis tincidunt. Donec at ultrices est.</p>
+            </div>
+            <div class="tab-pane" id="tabs1-pane6">
+              <h4>Mes Offres de Services</h4>
+              <p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis. Suspendisse potenti. Ut porta rhoncus ligula, sed fringilla felis feugiat eget. In non purus quis elit iaculis tincidunt. Donec at ultrices est.</p>
+            </div>
+            <div class="tab-pane" id="tabs1-pane7">
+              <h4>Mes Transactions</h4>
+              <p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis. Suspendisse potenti. Ut porta rhoncus ligula, sed fringilla felis feugiat eget. In non purus quis elit iaculis tincidunt. Donec at ultrices est.</p>
+            </div>
+            {{/if}}
+          </div><!-- /.tab-content -->
+        </div><!-- /.tabbable -->
+      </div><!-- /.row -->
+
+      
+
+      
+
+    </div>
+	
+</template>

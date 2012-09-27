@@ -1,0 +1,31 @@
+// Annonces -- {
+//				titre: 			String, 
+//				description: 		String,
+//				image:			String,
+//				type: 			String, (information,produit,service)
+//				objet: 			String, (demande,offre)
+//				statut: 		String, (active,desactive,archive)
+//				date_creation: 		Date,
+//				echeance: 		Date,
+//           			themes: 		[String, ...],
+//				emplacement:		{ lon : Number, lat: Number } 
+//           			createur: 		String,
+//				start_date: 		Date,
+//				end_date: 		Date,
+//}
+Annonces = new Meteor.Collection("annonces");
+
+// Publie toutes les annonces.
+Meteor.publish('c_annonces', function () {
+  return Annonces.find();
+});
+
+// Publie les annonces par type d'annonces.
+//Meteor.publish('annonces_par_type', function (type) {
+//  return Annonces.find({type: type});
+//});
+
+// Publie les annonces actives uniquement.
+//Meteor.publish('annonces_actives', function () {
+//  return Annonces.find({statut: 'active'});
+//});

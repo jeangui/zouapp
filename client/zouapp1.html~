@@ -1,0 +1,29 @@
+<head>
+  <title>zouapp1</title>
+</head>
+
+<body>
+<div id="main-pane">
+{{> annonces_tpl}}
+</div>
+</body>
+
+<template name="annonces_tpl">
+<h1>Les annonces</h1>
+<ul id="item-list" class="thumbnails">
+{{#each ctx_annonces}}
+	{{> annonce_tpl}}
+{{/each}}
+</ul>
+</template>
+
+<template name="annonce_tpl">
+<li class="span3">
+	<div class="thumbnail">
+		<img src="{{image}}" alt="">
+		<div class="btn btn-primary"/>
+		<h5>{{titre}}</h5>
+		<p>{{description}}</p>
+	</div>	
+</li>
+</template>

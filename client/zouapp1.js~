@@ -1,0 +1,13 @@
+Annonces = new Meteor.Collection("c_annonces");
+
+// abonnement à la collection 'c_annonces' au démarrage.
+Meteor.subscribe('c_annonces'};
+
+
+  Template.annonces_tpl.ctx_annonces = function () {
+    return Annonces.find();
+  };
+
+  Template.annonce_tpl.ctx_annonces = function () {
+    return Annonces.find();
+  };

@@ -1,0 +1,63 @@
+
+{
+	titre: 		"Veille dame", 
+	description: 	"Veille dame du quartier a besoin qu'une Infirmière passe à son domicile tous les matins pour lui faire une piqure.",
+	image:		"",
+	type: 		"information",
+	objet: 		"demande",
+	statut: 	"active",
+	date_creation: 	new Date(),
+	echeance: 	new Date("2012,06,07,12:00:00"),
+	themes: 	["centre aéré"],
+	emplacement:	{ lon : 43.5633, lat: 5.388383 },
+	createur: 	"1898698760986098",
+	start_date: 	new Date("2012,06,08,18:30:00"),
+	end_date: 	new Date("2012,06,08,00:30:00"),
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+// ------------------------
+//	ANNONCES ARCHIVEES
+// ------------------------
+
+//AnnoncesArchives = new Meteor.Collection("c_annonces_archives");
+
+// abonnement à la collection 'c_annonces_active' au démarrage.
+//Meteor.subscribe('c_annonces_archives');
+
+/*Template.annonces_archives_tpl.ctx_annonces_archives = function () {
+  	console.log("-- Template.annonces_archives_tpl.ctx_annonces_archives --");
+  	console.log("nombre : " + AnnoncesArchives.find().count() );
+    return AnnoncesArchives.find();
+  };*/
+
+
+  
