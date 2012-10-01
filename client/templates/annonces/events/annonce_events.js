@@ -4,6 +4,9 @@ Template.annonce_tpl.events = {
 	
   		//alert("id : " + this._id );
   		var annonce_choisie = Annonces.findOne( { _id : this._id });
+
+  		var monuser = Meteor.user();
+    
   		
   		var ma_tx = {
 			titre: 			annonce_choisie.titre,
@@ -13,7 +16,7 @@ Template.annonce_tpl.events = {
 			statut: 		"initiee",
 			date_creation: 	new Date(),
 			createur: 		annonce_choisie.createur, 
-			acteur: 		"8f898eaf-ea2f-4865-a930-e7d4cd0be878",
+			acteur: 		monuser._id,
 			annonce: 		annonce_choisie._id
 		};
 

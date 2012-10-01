@@ -10,7 +10,7 @@ Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 		console.log("\t longitude : " + mon_emplacement.lon );
 		console.log("\t latitude : " + mon_emplacement.lat );
 		return Annonces.find( { emplacement : { $near :  { "lat" : mon_emplacement.lat, "lon" :  mon_emplacement.lon } , $maxDistance : 0.1 },statut: "active" } );
-		//return Annonces.find( { emplacement : { $near :  { "lat" : 43.2633, "lon" : 5.388383 } , $maxDistance : 1 },statut: "active" } );
+		//return Annonces.find( { emplacement : { $near :  { "lat" : 43.2633, "lon" : 5.388383	 } , $maxDistance : 1 },statut: "active" } );
 	}
 	else
 	{
@@ -25,7 +25,8 @@ Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 Meteor.publish('c_transactions_actives', function () {
 
 	console.log(" mon identifiant : " + this.userId() );
-	return Transactions.find({statut: {$ne : 'archivee' } });
+	return Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId() } , {acteur: this.userId() } ] } );
+	//return Transactions.find({objet: 'demande', {$or:[{createur: monuser._id} , {acteur: monuser._id}]} });
 
 });
 
