@@ -2,41 +2,74 @@ Template.transactions_demande_tpl.ctx_transactions_demande = function () {
 	
   	console.log("-- Template.transactions_demande_tpl.ctx_transactions_demande --");
 
-    var monuser = Meteor.user();
-    console.log("monuser : " + monuser );
-    
+    var lesTransactions = Transactions.find();
 
-    if ( monuser == null ) 
-    {
-      return Transactions.find({objet: 'demande'});
-    }
-    else
-    {
-      console.log("identifiant : " + monuser._id );
-      //return Transactions.find({objet: 'demande', {$or:[{createur: monuser._id} , {acteur: monuser._id}]} });
-      return Transactions.find({objet: 'demande'});
+    console.log("lesTransactions count : " + lesTransactions.count() );
 
-    }
-  	
+    var demandeData = [];
+
+    lesTransactions.forEach( function (transac) {
+        
+        var annon = Annonces.findOne( { _id : transac.annonce });
+
+        if ( annon.objet == 'demande' )
+        {
+          var tt = {
+            titre:      annon.titre,
+            objet:      annon.objet,
+            type:       annon.type,
+            description:  annon.description,
+            statut:     transac.statut,
+            date_creation:  transac.date_creation,
+            createur:     annon.createur, 
+            acteur:     transac.acteur,
+            annonce:    annon._id
+          };
+
+          demandeData.push( tt );
+        }
+
+        
+    });
+
+    //return Transactions.find({objet: 'demande'});  	
+    return demandeData;
 	
   };
 
   Template.transactions_demande_tpl.ctx_transactions_demande_count = function () {
 
-    var monuser = Meteor.user();
-    console.log("monuser : " + monuser );
-    
+    var lesTransactions = Transactions.find();
 
-    if ( monuser == null ) 
-    {
-      return Transactions.find({objet: 'demande'}).count();
-    }
-    else
-    {
-      console.log("identifiant : " + monuser._id );
-      //return Transactions.find({objet: 'demande', {$or:[{createur: monuser._id} , {acteur: monuser._id}]} }).count();
-      return Transactions.find({objet: 'demande'}).count();
+    console.log("lesTransactions count : " + lesTransactions.count() );
 
-    }
+    var demandeData = [];
+
+    lesTransactions.forEach( function (transac) {
+        
+        var annon = Annonces.findOne( { _id : transac.annonce });
+
+        if ( annon.objet == 'demande' )
+        {
+          var tt = {
+            titre:      annon.titre,
+            objet:      annon.objet,
+            type:       annon.type,
+            description:  annon.description,
+            statut:     transac.statut,
+            date_creation:  transac.date_creation,
+            createur:     annon.createur, 
+            acteur:     transac.acteur,
+            annonce:    annon._id
+          };
+
+          demandeData.push( tt );
+        }
+
+        
+    });
+
+    //return Transactions.find({objet: 'demande'});   
+    return demandeData.length;
     
   };

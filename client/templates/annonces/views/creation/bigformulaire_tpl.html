@@ -1,42 +1,28 @@
 	<template name="bigformulaire_tpl">
 
 	{{#if currentUser}}
-	<div style="border: 5px solid #DDD;margin-bottom: 10px;padding-top: 10px;padding-left: 60px;background-color: #262E4F;">
+	<div id="big_formulaire">
 		<div class="container">
 			<div class="row">
-				<div class="span9">
-					<div class="well">
-						<h2>Créer votre annonce</h2>
-					</div>
+				<div class="span6">
+					<h5 class="well">Créer votre annonce</h5>
 				</div>
 			</div>
 			<div class="row">
-			    <div class="span3">
-		    	    <form class="well form-inline">
-					    <legend>
-					    	<h3>... d'information</h3>
-					    </legend>
+			    <div class="span2">
+		    	    <h5 style="color: white;">... d'information</h5>
 					    <a href="#demandeInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
 						<a href="#offreInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
-				    </form>
 			    </div>
-			    <div class="span3">
-			    	<form class="well form-inline">
-					    <legend>
-					    	<h3>... de service</h3>
-					    </legend>
+			    <div class="span2">
+			    	<h5 style="color: white;">... de service</h5>
 					    <a href="#demandeServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
 						<a href="#offreServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
-				    </form>
 			    </div>
-			    <div class="span3">
-			    	<form class="well form-inline">
-					    <legend>
-					    	<h3>...de bien</h3>
-					    </legend>
+			    <div class="span2">
+			    	<h5 style="color: white;">... de bien</h5>
 					    <a href="#demandeBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
 						<a href="#offreBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
-				    </form>
 			    </div>
 				
 			</div>	

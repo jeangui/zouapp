@@ -12,6 +12,13 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#demandeInformationModal #annonces-emplacement-longitude-input").val();
     var statut = $("#demandeInformationModal #annonces-statut-input").val();
 
+    
+    if ( urlimage == null ) {
+        urlimage = "postit.png";
+    } 
+
+    //alert( urlimage );
+
     var annonce = {
         titre:          titre, 
         description:    description,
@@ -47,6 +54,10 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#offreInformationModal #annonces-emplacement-longitude-input").val();
     var statut = $("#offreInformationModal #annonces-statut-input").val();
 
+    if ( urlimage == null ) {
+        urlimage = "postit.png";
+    }
+
     var annonce = {
         titre:          titre, 
         description:    description,
@@ -80,6 +91,10 @@ Template.bigformulaire_tpl.events = {
     var latitude = $("#demandeServiceModal #annonces-emplacement-latitude-input").val();
     var longitude = $("#demandeServiceModal #annonces-emplacement-longitude-input").val();
     var statut = $("#demandeServiceModal #annonces-statut-input").val();
+
+    if ( urlimage == null ) {
+        urlimage = "postit.png";
+    }
 
     var annonce = {
         titre:          titre, 
@@ -115,6 +130,10 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#offreServiceModal #annonces-emplacement-longitude-input").val();
     var statut = $("#offreServiceModal #annonces-statut-input").val();
 
+    if ( urlimage == null ) {
+        urlimage = "postit.png";
+    }
+
     var annonce = {
         titre:          titre, 
         description:    description,
@@ -149,6 +168,10 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#demandeBienModal #annonces-emplacement-longitude-input").val();
     var statut = $("#demandeBienModal #annonces-statut-input").val();
 
+    if ( urlimage == null ) {
+        urlimage = "postit.png";
+    }
+
     var annonce = {
         titre:          titre, 
         description:    description,
@@ -182,6 +205,10 @@ Template.bigformulaire_tpl.events = {
     var latitude = $("#offreBienModal #annonces-emplacement-latitude-input").val();
     var longitude = $("#offreBienModal #annonces-emplacement-longitude-input").val();
     var statut = $("#offreBienModal #annonces-statut-input").val();
+
+    if ( urlimage == null ) {
+        urlimage = "postit.png";
+    }
 
     var annonce = {
         titre:          titre, 

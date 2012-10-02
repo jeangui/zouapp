@@ -25,9 +25,27 @@ Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 Meteor.publish('c_transactions_actives', function () {
 
 	console.log(" mon identifiant : " + this.userId() );
-	return Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId() } , {acteur: this.userId() } ] } );
-	//return Transactions.find({objet: 'demande', {$or:[{createur: monuser._id} , {acteur: monuser._id}]} });
+	var lesTransactions = Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId() } , {acteur: this.userId() } ] } );
 
+	/*
+	console.log("transac count : " + lesTransactions.count() );
+
+	lesTransactions.forEach(function (transac) {
+	  	var annon = Annonces.findOne( { _id : transac.annonce });
+
+	  	console.log("annon._id : " + annon._id );
+	  	console.log("annon.titre : " + annon.titre );
+	  	console.log("annon.objet : " + annon.objet );
+	  	console.log("annon.type : " + annon.type );
+	  	console.log("annon.description : " + annon.description );
+	  	console.log("annon.createur : " + annon.createur );
+	  	transac.annonce = annon._id;
+	  	transac.titre = annon.titre;
+	  	transac.objet = annon.objet;
+	});
+	*/
+
+	return lesTransactions;
 });
 
 
