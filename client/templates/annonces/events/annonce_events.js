@@ -22,6 +22,14 @@ Template.annonce_tpl.events = {
 
 	Transactions.insert( ma_tx );
 
+	$('#ongletsTab a[href="#tabs1-pane3"]').tab('show');
+
+	/*
+	$('#notification').notify({
+	    message: { text: 'Aw yeah, It works!' }
+	  }).show();
+	*/
+
   }
 
 

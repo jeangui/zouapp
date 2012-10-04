@@ -17,8 +17,6 @@ Template.bigformulaire_tpl.events = {
         urlimage = "image.png";
     }
 
-    alert( urlimage );
-
     var annonce = {
         titre:          titre, 
         description:    description,
@@ -38,6 +36,9 @@ Template.bigformulaire_tpl.events = {
 
     
     Annonces.insert(annonce);
+
+    $('#ongletsTab a[href="#tabs1-pane2"]').tab('show');
+
     $("#demandeInformationModal").modal("hide");
 
 
@@ -76,7 +77,10 @@ Template.bigformulaire_tpl.events = {
         start_date:     new Date("2012,06,08,18:30:00"),
         end_date:       new Date("2012,06,08,00:30:00"),
     };
+
     Annonces.insert(annonce);
+
+    $('#ongletsTab a[href="#tabs1-pane2"]').tab('show');
 
     $("#offreInformationModal").modal("hide");
 
@@ -114,7 +118,10 @@ Template.bigformulaire_tpl.events = {
         start_date:     new Date("2012,06,08,18:30:00"),
         end_date:       new Date("2012,06,08,00:30:00"),
     };
+    
     Annonces.insert(annonce);
+
+    $('#ongletsTab a[href="#tabs1-pane2"]').tab('show');
 
     $("#demandeServiceModal").modal("hide");
 
@@ -152,7 +159,10 @@ Template.bigformulaire_tpl.events = {
         start_date:     new Date("2012,06,08,18:30:00"),
         end_date:       new Date("2012,06,08,00:30:00"),
     };
+
     Annonces.insert(annonce);
+
+    $('#ongletsTab a[href="#tabs1-pane2"]').tab('show');
 
     $("#offreServiceModal").modal("hide");
 
@@ -190,7 +200,10 @@ Template.bigformulaire_tpl.events = {
         start_date:     new Date("2012,06,08,18:30:00"),
         end_date:       new Date("2012,06,08,00:30:00"),
     };
+    
     Annonces.insert(annonce);
+
+    $('#ongletsTab a[href="#tabs1-pane2"]').tab('show');
 
     $("#demandeBienModal").modal("hide");
 
@@ -228,7 +241,10 @@ Template.bigformulaire_tpl.events = {
         start_date:     new Date("2012,06,08,18:30:00"),
         end_date:       new Date("2012,06,08,00:30:00"),
     };
+    
     Annonces.insert(annonce);
+
+    $('#ongletsTab a[href="#tabs1-pane2"]').tab('show');
 
     $("#offreBienModal").modal("hide");
 

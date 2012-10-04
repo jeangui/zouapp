@@ -127,14 +127,14 @@ box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 }
 
 #big_formulaire {
-    border: 5px solid #DDD;
+    /*border: 5px solid #DDD;*/
     margin-bottom: 40px;
     margin-left: 150px;
     margin-right: 150px;
     padding-top: 10px;
     padding-left: 40px;
     padding-bottom: 15px;
-    background-color: #262E4F;
+    /*background-color: #262E4F;*/
 }
 
 .nav-tabs > li > a {
