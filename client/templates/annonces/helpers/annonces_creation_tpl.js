@@ -14,8 +14,12 @@ Template.annonces_creation_tpl.ctx_username = function () {
 
 
   Template.annonce_creation_geo_form_tpl.location = function () {
+    
       console.log("-- Template.annonces_creation_tpl.location --");
-      return Session.get('loc');
+
+      var location = { "lat" : Session.get('latitude'), "lon" : Session.get('longitude') };
+
+      return location;
     };
 
 

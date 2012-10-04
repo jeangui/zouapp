@@ -24,6 +24,7 @@ Template.annonce_tpl.events = {
 
   }
 
+
 };
 
 

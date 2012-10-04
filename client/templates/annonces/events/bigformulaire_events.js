@@ -11,13 +11,13 @@ Template.bigformulaire_tpl.events = {
     var latitude = $("#demandeInformationModal #annonces-emplacement-latitude-input").val();
     var longitude = $("#demandeInformationModal #annonces-emplacement-longitude-input").val();
     var statut = $("#demandeInformationModal #annonces-statut-input").val();
+  
 
-    
-    if ( urlimage == null ) {
-        urlimage = "postit.png";
-    } 
+    if ( urlimage == null || urlimage == undefined || urlimage == "") {
+        urlimage = "image.png";
+    }
 
-    //alert( urlimage );
+    alert( urlimage );
 
     var annonce = {
         titre:          titre, 
@@ -34,6 +34,9 @@ Template.bigformulaire_tpl.events = {
         start_date:     new Date("2012,06,08,18:30:00"),
         end_date:       new Date("2012,06,08,00:30:00"),
     };
+
+
+    
     Annonces.insert(annonce);
     $("#demandeInformationModal").modal("hide");
 
@@ -54,8 +57,8 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#offreInformationModal #annonces-emplacement-longitude-input").val();
     var statut = $("#offreInformationModal #annonces-statut-input").val();
 
-    if ( urlimage == null ) {
-        urlimage = "postit.png";
+    if ( urlimage == null || urlimage == undefined || urlimage == "") {
+        urlimage = "image.png";
     }
 
     var annonce = {
@@ -92,8 +95,8 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#demandeServiceModal #annonces-emplacement-longitude-input").val();
     var statut = $("#demandeServiceModal #annonces-statut-input").val();
 
-    if ( urlimage == null ) {
-        urlimage = "postit.png";
+    if ( urlimage == null || urlimage == undefined || urlimage == "") {
+        urlimage = "image.png";
     }
 
     var annonce = {
@@ -130,8 +133,8 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#offreServiceModal #annonces-emplacement-longitude-input").val();
     var statut = $("#offreServiceModal #annonces-statut-input").val();
 
-    if ( urlimage == null ) {
-        urlimage = "postit.png";
+    if ( urlimage == null || urlimage == undefined || urlimage == "") {
+        urlimage = "image.png";
     }
 
     var annonce = {
@@ -168,8 +171,8 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#demandeBienModal #annonces-emplacement-longitude-input").val();
     var statut = $("#demandeBienModal #annonces-statut-input").val();
 
-    if ( urlimage == null ) {
-        urlimage = "postit.png";
+    if ( urlimage == null || urlimage == undefined || urlimage == "") {
+        urlimage = "image.png";
     }
 
     var annonce = {
@@ -206,8 +209,8 @@ Template.bigformulaire_tpl.events = {
     var longitude = $("#offreBienModal #annonces-emplacement-longitude-input").val();
     var statut = $("#offreBienModal #annonces-statut-input").val();
 
-    if ( urlimage == null ) {
-        urlimage = "postit.png";
+    if ( urlimage == null || urlimage == undefined || urlimage == "") {
+        urlimage = "image.png";
     }
 
     var annonce = {

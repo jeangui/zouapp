@@ -1,11 +1,14 @@
 <template name="onglets_tpl">
 
 	<div class="container">
+    {{#if currentUser}}
+    {{else}}
       <div class="row">
         <div class="span2">
           <img src="postit.png" float="left">
         </div>
         <div class="span10">
+
           <div class="well">
           <strong>Plateforme</strong> permettant aux <strong>demandeurs de services</strong> et aux <strong>fournisseurs de services</strong> de se trouver et d'interagir efficacement <br>
           <ul>
@@ -29,12 +32,13 @@
           </div>
         </div>
       </div>
+      {{/if}}
       <div class="row">
         <div class="tabbable span12">
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tabs1-pane1" data-toggle="tab"><h5>Place de marché</h5></a></li>
             {{#if currentUser}}
-            <li><a href="#tabs1-pane2" data-toggle="tab"><h5>Mes services</h5></a></li>
+            <li><a href="#tabs1-pane2" data-toggle="tab"><h5>Mes Annonces</h5></a></li>
             <li><a href="#tabs1-pane3" data-toggle="tab"><h5>Mes Transactions</h5></a></li>
             <li><a href="#tabs1-pane4" data-toggle="tab"><h5>Mes centres d'intérêts</h5></a></li>
             <li><a href="#tabs1-pane5" data-toggle="tab"><h5>Mes amis</h5></a></li>
@@ -45,9 +49,7 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tabs1-pane1">
 
-              	{{> annonces_demande_tpl}}
-		
-				        {{> annonces_offre_tpl}}
+                {{> lesannonces_tpl}}
 
             </div>
             {{#if currentUser}}

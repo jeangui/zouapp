@@ -6,6 +6,8 @@ Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 	console.log("# Publication annonces actives ...");
 	console.log(" mon identifiant : " + this.userId() );
 	console.log(" mon emplacement : " + mon_emplacement );
+
+
 	if (mon_emplacement != null) {
 		console.log("\t longitude : " + mon_emplacement.lon );
 		console.log("\t latitude : " + mon_emplacement.lat );

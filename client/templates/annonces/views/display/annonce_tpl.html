@@ -32,25 +32,27 @@
 			  </ul>
 			  <div class="tab-content span2">
 			  	 <div class="tab-pane active" id="{{_id}}1">
-			  	 	<img src="{{image}}" alt="" height="150" width="120" style="margin-bottom:10px;" class="img-polaroid">
+			  	 	<img src="{{image}}" alt="" height="80" width="80" style="margin-bottom:10px;" class="img-polaroid">
 			  	 	<div style="font-size: 10px;">
 						<p>{{description}}</p>
 					</div>
 			  	 </div>
 			    <div class="tab-pane" id="{{_id}}2">
 			    	<div style="font-size: 10px;">
-		    			<div>date de démarrage : {{start_date}}</div>
-						<div>date de fin : {{end_date}}</div>
-						<div>valide jusqu'au : {{echeance}}</div>
+		    			<ul>
+			    			<li>Date de démarrage : {{start_date}}</li>
+							<li>Date de fin : {{end_date}}</li>
+							<li>Echeance : {{echeance}}</li>
+						</ul>
 					</div>
 			    </div>
 			    <div class="tab-pane" id="{{_id}}3">
 			    	<div style="font-size: 10px;">
-			    		<div class="strong">emplacement : </div>
+			    		<div class="strong">Emplacement : </div>
 			    		<ul>
-							<li>latitude : {{emplacement.lat}}</li>
-							<li>longitude : {{emplacement.lon}}</li>
-							<li>distance : {{distance}} mètres</li>
+							<li>Latitude : {{emplacement.lat}}</li>
+							<li>Longitude : {{emplacement.lon}}</li>
+							<li>Distance : {{distance}} mètres</li>
 						</ul>			    		
 			    	</div>
 			    </div>
@@ -71,11 +73,13 @@
 			    </div>
 			    <div class="tab-pane" id="{{_id}}7">
 			    	<div style="font-size: 10px;">
-				    	créé le : {{date_creation}}
-						statut : {{statut}}
-						type : {{type}}
-						objet : {{objet}}
-						id : {{_id}}
+			    		<ul>
+					    	<li>créé le : {{date_creation}}</li>
+							<li>statut : {{statut}}</li>
+							<li>type : {{type}}</li>
+							<li>objet : {{objet}}</li>
+							<li>id : {{_id}}</li>
+						</ul>
 					</div>
 			    </div>
 			  </div>

@@ -8,7 +8,8 @@
 
 .thumbnail {
     border: 5px solid #DDD;
-    background-color: #262E4F;
+    /*background-color: #262E4F;*/
+    background-image: url('/background-tito-btn-blue.png');
     margin-top: 10px;
 }
 
@@ -19,6 +20,15 @@
 
 .tab-content > .tab-pane, .pill-content > .pill-pane {
     color: white;
+}
+
+.tab-content .span2 {
+    width: 240px;
+    margin-left: 0px;
+}
+
+li.span4 {
+     margin-left: 15px;
 }
 
 .form-horizontal {
@@ -34,13 +44,13 @@
 
 .entete-annonce {
     
-    background-color: #262E4F;
+    /*background-color: #262E4F;*/
     margin-bottom: 2px;
 }
 
 .entete-annonce-spam {
     border: 2px solid #DDD;
-    background-color: #262E4F;
+    /*background-color: #262E4F;*/
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -58,7 +68,7 @@
 
 .entete-annonce-check {
     border: 2px solid #DDD;
-    background-color: #262E4F;
+    /*background-color: #262E4F;*/
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
@@ -76,7 +86,7 @@
 
 .entete-annonce-titre {
     /*border: 2px solid #DDD;*/
-    background-color: #262E4F;
+    /*background-color: #262E4F;*/
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -118,7 +128,7 @@ box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 
 #big_formulaire {
     border: 5px solid #DDD;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     margin-left: 150px;
     margin-right: 150px;
     padding-top: 10px;
@@ -133,4 +143,7 @@ padding-bottom: 4px;
 line-height: 15px;
 }
 
-​
+​.filtre_marche {
+    margin-top: 10px;
+}
+

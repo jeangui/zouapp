@@ -2,8 +2,8 @@ Template.annonce_tpl.distance = function () {
       console.log("-- Template.annonce_tpl.distance --");
 
       var position = { 
-	      	"lat" :  Session.get('loc').lat,
-	      	"lon" : Session.get('loc').lon
+	      	"lat" :  Session.get('latitude'),
+	      	"lon" : Session.get('longitude')
   		};
 
       return getDistance( position , this.emplacement );
