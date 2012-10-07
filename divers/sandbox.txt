@@ -1,0 +1,5 @@
+<div class="alert alert-success">
+	  <button type="button" class="close" data-dismiss="alert">×</button>
+	  <h4>Warning!</h4>
+	  Best check yo self, you're not...
+	</div>

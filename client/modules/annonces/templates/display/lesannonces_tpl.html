@@ -1,0 +1,30 @@
+<template name="lesannonces_tpl">
+	<div class="container" id="filtre_marche">
+		<div class="well" style="background-image: url('/background-tito-btn-grey.png');">
+			<div>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="marcheDemandeCheckbox" {{#if ctx_lesannonces_marcheDemandeSelected}}checked="checked"{{/if}} > Demande
+		        </label>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="marcheOffreCheckbox" {{#if ctx_lesannonces_marcheOffreSelected}}checked="checked"{{/if}}> Offre
+		        </label>
+		    </div>
+		    <div>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="marcheInfoCheckbox" {{#if ctx_lesannonces_marcheInfoSelected}}checked="checked"{{/if}}> Information
+		        </label>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="marcheServiceCheckbox" {{#if ctx_lesannonces_marcheServiceSelected}}checked="checked"{{/if}}> Service
+		        </label>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="marcheBienCheckbox" {{#if ctx_lesannonces_marcheBienSelected}}checked="checked"{{/if}}> Bien
+		        </label>
+		    </div>
+		</div>		
+	</div>
+	{{#each ctx_lesannonces}}
+		{{> annonce_tpl}}
+	{{/each}}
+
+
+</template>

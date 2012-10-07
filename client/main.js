@@ -62,6 +62,17 @@ console.log('session loc avant subscription : ' + Session.get('loc') );
     Session.set('marcheServiceSelected', true );
     Session.set('marcheBienSelected', true );
 
+    /* selection filtre onglet mesannonces */
+    Session.set('mesDemandeSelected', true );
+    Session.set('mesOffreSelected', true );
+    Session.set('mesInfoSelected', true );
+    Session.set('mesServiceSelected', true );
+    Session.set('mesBienSelected', true );
+
+
+    /* Durée de vie d'une annonce */
+    Session.set('AnnonceDureeVieStandard', 15 );
+
 
     /* feedback appli */
     var uvOptions = {};

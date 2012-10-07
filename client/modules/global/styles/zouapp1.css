@@ -1,0 +1,23 @@
+/* CSS declarations go here */
+body {
+  	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	background-image: url('/background-tito.png');
+  	background-position: center;
+}
+
+.modal.large{
+    width: 600px;
+    margin-left: -300px; /* - width/2 */
+}
+
+
+.tabbable .span12 {
+	margin-top: 10px;
+}
+
+
+.footer {
+	margin-top: 50px;
+}
+
+

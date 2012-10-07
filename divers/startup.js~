@@ -1,0 +1,42 @@
+  // if the database is empty on server start, create some sample data.
+Meteor.startup(function () {
+  if (Annonces.find().count() === 0) {
+    var data = [
+      	{
+		titre: 			"Babysitting1", 
+		description: 		"Je suis étudiante et j'adore m'occuper des enfants. Je propose mes services pour faire du baby sitting",
+		image:			"http://www.quotidien.uqam.ca/storage/images/sassine_s.jpg",
+		type: 			"service",
+		objet: 			"offre",
+		statut: 		"active",
+		date_creation: 		new Date(),
+		echeance: 		new Date("2012,06,07,12:00:00"),
+		themes: 		["babysitting"],
+		emplacement:		{ lon : 43.2633, lat: 5.388383 },
+		createur: 		"1898698760986098",
+		start_date: 		new Date("2012,06,08,18:30:00"),
+		end_date: 		new Date("2012,06,08,00:30:00"),
+	},
+	{
+		titre: 			"Babysitting2", 
+		description: 		"Je suis étudiante et j'adore m'occuper des enfants. Je propose mes services pour faire du baby sitting",
+		image:			"http://www.quotidien.uqam.ca/storage/images/sassine_s.jpg",
+		type: 			"service",
+		objet: 			"offre",
+		statut: 		"active",
+		date_creation: 		new Date(),
+		echeance: 		new Date("2012,06,07,12:00:00"),
+		themes: 		["babysitting"],
+		emplacement:		{ lon : 43.2633, lat: 5.388383 },
+		createur: 		"1898698760986098",
+		start_date: 		new Date("2012,06,08,18:30:00"),
+		end_date: 		new Date("2012,06,08,00:30:00"),
+	}
+    ];
+
+    for (var i = 0; i < data.length; i++) {
+        var annonce = data[i];
+        Annonces.insert(annonce);
+    }
+  }
+});

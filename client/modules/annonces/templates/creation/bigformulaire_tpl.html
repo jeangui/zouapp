@@ -1,0 +1,119 @@
+	<template name="bigformulaire_tpl">
+
+	{{#if currentUser}}
+	<div id="big_formulaire">
+		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<h5 class="well">Déposer votre annonce</h5>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="span2">
+		    	    <h5 style="color: white;">... d'information</h5>
+					    <a href="#demandeInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+						<a href="#offreInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+			    </div>
+			    <div class="span2">
+			    	<h5 style="color: white;">... de service</h5>
+					    <a href="#demandeServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+						<a href="#offreServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+			    </div>
+			    <div class="span2">
+			    	<h5 style="color: white;">... de bien</h5>
+					    <a href="#demandeBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+						<a href="#offreBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+			    </div>
+				
+			</div>	
+
+		</div>
+	</div>
+	
+
+	<div class="modal hide fade in large" id="demandeInformationModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Décrivez votre demande d'information</h3>
+		</div>
+		<div class="modal-body">
+			{{> annonce_creation_demande_info_tpl}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary" data-dismiss="modal">NOK</a>
+			<button class="btn btn-primary" id="btn-demandeInformationModal">OK</button>
+		</div>
+	</div>
+
+	<div class="modal hide fade in" id="offreInformationModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Décrivez votre offre d'information</h3>
+		</div>
+		<div class="modal-body">
+			{{> annonce_creation_offre_info_tpl}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary" data-dismiss="modal">NOK</a>
+			<button class="btn btn-primary" id="btn-offreInformationModal">OK</button>
+		</div>
+	</div>
+	
+	<div class="modal hide fade in" id="demandeServiceModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Décrivez votre demande de service</h3>
+		</div>
+		<div class="modal-body">
+			{{> annonce_creation_demande_service_tpl}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary" data-dismiss="modal">NOK</a>
+			<button class="btn btn-primary" id="btn-demandeServiceModal">OK</button>
+		</div>
+	</div>
+
+	<div class="modal hide fade in" id="offreServiceModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Décrivez votre offre de service</h3>
+		</div>
+		<div class="modal-body">
+			{{> annonce_creation_offre_service_tpl}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary" data-dismiss="modal">NOK</a>
+			<button class="btn btn-primary" id="btn-offreServiceModal">OK</button>
+		</div>
+	</div>
+
+	<div class="modal hide fade in" id="demandeBienModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Décrivez votre demande de bien</h3>
+		</div>
+		<div class="modal-body">
+			{{> annonce_creation_demande_bien_tpl}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary" data-dismiss="modal">NOK</a>
+			<button class="btn btn-primary" id="btn-demandeBienModal">OK</button>
+		</div>
+	</div>
+
+	<div class="modal hide fade in" id="offreBienModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Décrivez votre offre de bien</h3>
+		</div>
+		<div class="modal-body">
+			{{> annonce_creation_offre_bien_tpl}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary" data-dismiss="modal">NOK</a>
+			<button class="btn btn-primary" id="btn-offreBienModal">OK</button>
+		</div>
+	</div>
+	{{/if}}
+
+</template>

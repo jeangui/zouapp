@@ -1,0 +1,9 @@
+
+
+
+Template.annonces_creation_tpl.ctx_username = function () {
+    console.log("-- Template.annonces_creation_tpl.ctx_username --");
+    return "toto";
+  }
+
+

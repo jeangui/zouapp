@@ -1,0 +1,130 @@
+<template name="test_tpl">
+	<div class="hero-unit">
+		<div class="container">
+			<div class="row">
+				<div class="span9">
+					<div class="well">
+						<h2>Créer votre annonce</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="span3">
+		    	    <form class="well form-inline">
+					    <legend>
+					    	<h3>... d'information</h3>
+					    </legend>
+					    <a href="#foo" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+					    <a href="#offreInformationModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+				    </form>
+			    </div>
+			    <div class="span3">
+			    	<form class="well form-inline">
+					    <legend>
+					    	<h3>... de service</h3>
+					    </legend>
+					    <a href="#demandeServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+					    <a href="#offreServiceModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+				    </form>
+			    </div>
+			    <div class="span3">
+			    	<form class="well form-inline">
+					    <legend>
+					    	<h3>...de bien</h3>
+					    </legend>
+					    <a href="#demandeBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Demande</a>
+					    <a href="#offreBienModal" role="button" class="btn-primary btn-large" data-toggle="modal">Offre</a>
+				    </form>
+			    </div>
+				
+			</div>	
+
+		</div>
+	</div>
+	
+	<div id="#foo" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre demande d'information</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    
+    <div id="#offreInfoModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre offre d'information</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#demandeServiceModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre demande de service</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#offreServiceModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre offre de service</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#demandeBienModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre demande de bien</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+    <div id="#offreBienModal" class="modal hide fade">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Décrivez votre offre de bien</h3>
+	    </div>
+	    <div class="modal-body">
+	    	{{> annonces_creation_tpl}}
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="#" class="btn">NOK</a>
+	    	<a href="#" class="btn btn-primary">OK</a>
+	    </div>
+    </div>
+
+</template>

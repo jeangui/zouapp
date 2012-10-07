@@ -1,0 +1,19 @@
+<template name="navbar_tpl">
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="#">ZOULAND</a>
+				<a class="brand" href="#">{{username}}</a>
+				<div class="nav pull-right">
+					{{> loginButtons}}
+				</div>
+				<div class="nav-collapse"></div>
+			</div>
+		</div>
+	</div>
+</template>

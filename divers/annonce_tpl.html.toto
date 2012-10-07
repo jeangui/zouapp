@@ -1,0 +1,52 @@
+<template name="annonce_tpl">
+	<li class="span4">
+		<div class="thumbnail">
+
+			<div class="tabbable tabs-left">
+			  <ul class="nav nav-tabs span1">
+			  	<li class="active"><a href="#{{_id}}1" data-toggle="tab"><i class="icon-info-sign icon-white"></i><!--Info--></a></li>
+			    <li><a href="#{{_id}}2" data-toggle="tab"><i class="icon-calendar icon-white"></i><!--Quand ?--></a></li>
+			    <li><a href="#{{_id}}3" data-toggle="tab"><i class="icon-road icon-white"></i><!--Où ?--></a></li>
+			    <li><a href="#{{_id}}4" data-toggle="tab"><i class="icon-tags icon-white"></i><!--Thèmes ?--></a></li>
+			    <li><a href="#{{_id}}5" data-toggle="tab"><i class="icon-user icon-white"></i><!--Qui ?--></a></li>
+			    <li><a href="#{{_id}}6" data-toggle="tab"><i class="icon-eye-open icon-white"></i><!--Statut ?--></a></li>
+			    <li><a href="#{{_id}}7" data-toggle="tab"><i class="icon-asterisk icon-white"></i><!--Plateforme--></a></li>
+			  </ul>
+			  <div class="tab-content span2">
+			  	 <div class="tab-pane active" id="{{_id}}1">
+			  	 	<img src="postit.png" alt="" height="50" width="50">
+			  	 	<span class="label label-info">{{titre}}</span>
+					<p>{{description}}</p>
+			  	 </div>
+			    <div class="tab-pane" id="{{_id}}2">
+	    			date de démarrage : <h6>{{start_date}}</h6>
+					date de fin : <h6>{{end_date}}</h6>
+					valide jusqu'au : <h6>{{echeance}}</h6>
+			    </div>
+			    <div class="tab-pane" id="{{_id}}3">
+			    	<div>emplacement : <h6>{{emplacement.lon}},{{emplacement.lat}}</h6></div>
+			    </div>
+			    <div class="tab-pane" id="{{_id}}4">
+			    	themes : <h6>{{themes}}</h6>
+			    </div>
+			    <div class="tab-pane" id="{{_id}}5">
+			    	<img src="{{image}}" alt="" height="100" width="80">
+					<p>createur : <h6>{{createur}}</h6></p>
+			    </div>
+			    <div class="tab-pane" id="{{_id}}6">
+					nombre de personnes intéressées : <div class="btn btn-primary">0</div>
+			    </div>
+			    <div class="tab-pane" id="{{_id}}7">
+			    	créé le : <h6>{{date_creation}}</h6>
+					statut : <h6>{{statut}}</h6>
+					type : <h6>{{type}}</h6>
+					objet : <h6>{{objet}}</h6>
+					id : <h6>{{_id}}</h6>
+			    </div>
+			  </div>
+			</div>
+
+
+		</div>	
+	</li>
+</template>
