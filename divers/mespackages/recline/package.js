@@ -1,0 +1,25 @@
+//--------------------------------------------------------------
+// METEOR CHARTS SMART PACKAGE
+//
+// Copyright (c) 2012  Dave Abrams  dave at daveab.com
+//
+// MIT License (MIT)
+// http://opensource.org/licenses/MIT
+// 
+// Dependencies
+// This library uses the http://g.raphaeljs.com/ Javascript package (MIT license).
+// 
+//------------------------------------------------------------
+
+Package.describe({
+  summary: "Recline.js : librairie for manipulating grid, map, timeline,...",
+  internal: true
+});
+
+Package.on_use(function (api, where) {
+  api.add_files([
+    'recline.js',
+    'recline.css',
+    'recline.dataset.js'
+  ], 'client');
+});

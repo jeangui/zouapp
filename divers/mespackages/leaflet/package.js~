@@ -1,0 +1,18 @@
+//--------------------------------------------------------------
+// LEAFLET SMART PACKAGE
+//------------------------------------------------------------
+
+Package.describe({
+  summary: "Leaflet : library interactive map",
+  internal: true
+});
+
+Package.on_use(function (api, where) {
+  api.add_files([
+    'leaflet.js',
+    'leaflet-src.js',
+    'leaflet.ie.css',
+    'leaflet.css',
+    'images/',
+  ], 'client');
+});

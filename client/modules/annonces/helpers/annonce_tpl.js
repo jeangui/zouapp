@@ -28,3 +28,20 @@ Template.annonce_tpl.tempsRestant = function ( date ) {
 
       return tempsRestant;
     };
+
+
+Template.annonce_tpl.de_l_utilisateur = function ( createurAnnonce ) {
+      console.log("-- Template.annonce_tpl.de_l_utilisateur --");
+
+      var monuser = Meteor.user();
+
+      if ( monuser == createurAnnonce ) 
+        { 
+          return true;
+        } 
+      else 
+        {
+          return false;
+        };
+      
+    };

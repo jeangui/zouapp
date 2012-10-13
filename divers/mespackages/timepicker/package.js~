@@ -1,0 +1,21 @@
+//--------------------------------------------------------------
+// TIMEPICKER BOOTSTRAP SMART PACKAGE
+// 
+//------------------------------------------------------------
+
+Package.describe({
+  summary: "Datepicker : Bootstrap comptible timepicker",
+  internal: true
+});
+
+Package.on_use(function (api, where) {
+  api.add_files([
+    'js/bootstrap-timepicker.js',
+    'compiled/timepicker.css',
+    'g.bar.js',
+    'g.dot.js',
+    'g.line.js',
+    'g.pie.js',
+    'meteor_charts.js'
+  ], 'client');
+});
