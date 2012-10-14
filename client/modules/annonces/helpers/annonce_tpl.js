@@ -34,14 +34,22 @@ Template.annonce_tpl.de_l_utilisateur = function ( createurAnnonce ) {
       console.log("-- Template.annonce_tpl.de_l_utilisateur --");
 
       var monuser = Meteor.user();
+      
+      /*
+      console.log("-- Template.annonce_tpl.de_l_utilisateur -- user : " + monuser._id );
+      console.log("-- Template.annonce_tpl.de_l_utilisateur -- createur : " + createurAnnonce );
+      console.log("-- Template.annonce_tpl.de_l_utilisateur -- createur == user : " + (createurAnnonce == monuser._id) );
+      */
 
-      if ( monuser == createurAnnonce ) 
-        { 
-          return true;
-        } 
+      if ( monuser != null && monuser._id == createurAnnonce ) 
+      { 
+        //console.log("-- Template.annonce_tpl.de_l_utilisateur -- TRUE " );
+        return true;
+      } 
       else 
-        {
-          return false;
-        };
+      {
+        //console.log("-- Template.annonce_tpl.de_l_utilisateur -- FALSE : " );
+        return false;
+      };
       
     };

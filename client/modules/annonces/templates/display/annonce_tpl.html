@@ -2,21 +2,33 @@
 	<li class="span4">
 		<div class="thumbnail">
 			<div class="entete-annonce">
+
 				{{#if currentUser}}
-					{{#if de_l_utilisateur}}
-					toto
-					{{/if}}
-				<div class="entete-annonce-spam">
-					<img src="spam.gif" alt="" height="30" width="30">
-				</div>
+					{{#if de_l_utilisateur createur}}
+					<div class="entete-annonce-suppression">
+						Supprimer
+					</div>
+					{{else}}
+					<div class="entete-annonce-spam">
+						<img src="spam.gif" alt="" height="30" width="30">
+					</div>
+					{{/if}}				
 				{{/if}}
+
 				<div class="entete-annonce-titre">
 					<span class="label label-info">{{titre}}</span>
 				</div>
+
 				{{#if currentUser}}
-				<div class="entete-annonce-check" id="{{_id}}">
-					<img src="check2.png" alt="" height="30" width="30">
-				</div>
+					{{#if de_l_utilisateur createur}}
+						<div class="entete-annonce-modification">
+							Modifier
+						</div>
+						{{else}}
+						<div class="entete-annonce-check" id="{{_id}}">
+							<img src="check2.png" alt="" height="30" width="30">
+						</div>
+					{{/if}}				
 				{{/if}} 
 			</div>
 

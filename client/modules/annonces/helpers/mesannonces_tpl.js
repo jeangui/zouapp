@@ -12,8 +12,64 @@ Template.mesannonces_tpl.ctx_mesannonces = function () {
 	var mesServiceSelected = Session.get('mesServiceSelected');
 	var mesBienSelected = Session.get('mesBienSelected');
 
+	console.log("mesDemandeSelected : " + mesDemandeSelected );
+	console.log("mesOffreSelected : " + mesOffreSelected );
+	console.log("mesInfoSelected : " + mesInfoSelected );
+	console.log("meseServiceSelected : " + mesServiceSelected );
+	console.log("mesBienSelected : " + mesBienSelected );
 
+	var req = {};
+	var typereq = {$in : []};
+	var objetreq = {$in : []};
 	
+
+	if ( mesDemandeSelected )
+	{
+		objetreq.$in.push('demande');
+	}
+	if ( mesOffreSelected )
+	{
+		objetreq.$in.push('offre');
+	}
+	if ( mesInfoSelected )
+	{
+		typereq.$in.push('information');
+	}
+	if ( mesServiceSelected )
+	{
+		typereq.$in.push('service');
+	}
+	if ( mesBienSelected )
+	{
+		typereq.$in.push('bien');
+	}
+
+
+	if ( typereq.$in.length == 0 || objetreq.$in.length == 0 )
+	{
+		console.log("{} ...");
+		return "{}";
+	}
+
+	if ( monuser == null )
+	{
+		req.type = typereq;
+		req.objet = objetreq;
+		console.log( "req : " + JSON.stringify( req ) );
+		return Annonces.find(req);
+	}
+	else
+	{
+		console.log("identifiant : " + monuser._id );
+		req.type = typereq;
+		req.objet = objetreq;
+		req.createur = monuser._id;
+		console.log( "req : " + JSON.stringify( req ) );
+		return Annonces.find(req);		
+	}
+
+
+	/*
 	if ( monuser == null ) 
 	{
 		if ( mesDemandeSelected && mesOffreSelected && mesInfoSelected && mesServiceSelected && mesBienSelected )
@@ -240,6 +296,7 @@ Template.mesannonces_tpl.ctx_mesannonces = function () {
 			return Annonces.find({ objet: 'offre' , type : 'info', createur: monuser._id  } );
 		}
 	}
+	*/
 
 	
   	
