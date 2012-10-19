@@ -1,5 +1,5 @@
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
-    background-color: grey;
+    /*background-color: grey;*/
 }
 
 .tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a {
@@ -86,17 +86,17 @@ li.span4 {
 }
 
 .entete-annonce-suppression {
-    /*border: 2px solid #DDD;*/
+    border: 2px solid #DDD;
     /*background-color: #262E4F;*/
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
     color : white;
-    /*-webkit-border-radius: 6px;*/
-    /*-moz-border-radius: 6px;*/
-    /*border-radius: 6px;*/
-    /*-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
-    /*-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
     width: 30px;
     height: 30px;
     float: left;
@@ -104,17 +104,17 @@ li.span4 {
 }
 
 .entete-annonce-modification {
-    /*border: 2px solid #DDD;*/
+    border: 2px solid #DDD;
     /*background-color: #262E4F;*/
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
     color : white;
-    /*-webkit-border-radius: 6px;*/
-    /*-moz-border-radius: 6px;*/
-    /*border-radius: 6px;*/
-    /*-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
-    /*-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
     width: 30px;
     height: 30px;
     float: right;
@@ -186,4 +186,96 @@ line-height: 15px;
 
 .thumbnail > hr {
     margin: 5px 0;
+}
+
+
+#demandeInformationModal > .modal-header {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+#demandeInformationModal > .modal-body {
+    padding-top: 5px;
+}
+
+#demandeServiceModal > .modal-header {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+#demandeServiceModal > .modal-body {
+    padding-top: 5px;
+}
+
+#demandeBienModal > .modal-header {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+#demandeBienModal > .modal-body {
+    padding-top: 5px;
+}
+
+#offreInformationModal > .modal-header {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+#offreInformationModal > .modal-body {
+    padding-top: 5px;
+}
+
+#offreServiceModal > .modal-header {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+#offreServiceModal > .modal-body {
+    padding-top: 5px;
+}
+
+#offreBienModal > .modal-header {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+#offreBienModal > .modal-body {
+    padding-top: 5px;
+}
+
+.modal-body .form-horizontal .control-group {
+    margin-bottom: 10px;
+}
+
+#lesannonces-theme-filter .label {
+    float: left;
+    margin-top: 9px;
+    margin-left: 12px;
+    margin-right: 8px;
+}
+
+#lesannonces-theme-filter .theme {
+    margin-top: 10px;
+    border: 1px solid #777;
+}
+
+#lesannonces-theme-filter .selected {
+    background: #69d;
+}
+
+#lesannonces-theme-filter .count {
+    font-weight: normal;
+    padding-left: 2px;
 }

@@ -45,11 +45,11 @@ Template.lesannonces_tpl.ctx_lesannonces = function () {
 	}
 
 
-	if ( typereq.$in.length == 0 || objetreq.$in.length == 0 )
+	/*if ( typereq.$in.length == 0 || objetreq.$in.length == 0 )
 	{
 		console.log("{} ...");
 		return "{}";
-	}
+	}*/
 
 	if ( monuser == null )
 	{

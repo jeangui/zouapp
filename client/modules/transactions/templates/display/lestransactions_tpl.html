@@ -1,0 +1,32 @@
+<template name="lestransactions_tpl">
+	<div class="container" id="filtre_transaction">
+		<div class="well" style="background-image: url('/background-tito-btn-grey.png');">
+			<div>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="transacDemandeCheckbox" {{#if ctx_lestransactionsDemandeSelected}}checked="checked"{{/if}} > Demande
+		        </label>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="transacOffreCheckbox" {{#if ctx_lestransactionsOffreSelected}}checked="checked"{{/if}}> Offre
+		        </label>
+		    </div>
+		    <div>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="transacInfoCheckbox" {{#if ctx_lestransactionsInfoSelected}}checked="checked"{{/if}}> Information
+		        </label>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="transacServiceCheckbox" {{#if ctx_lestransactionsServiceSelected}}checked="checked"{{/if}}> Service
+		        </label>
+		        <label class="checkbox inline">
+		          <input type="checkbox" id="transacBienCheckbox" {{#if ctx_lestransactionsBienSelected}}checked="checked"{{/if}}> Bien
+		        </label>
+		    </div>
+		</div>		
+	</div>
+
+		<ul id="item-list" class="thumbnails">
+		{{#each ctx_lestransactions}}
+			{{> transaction_tpl}}
+		{{/each}}
+		</ul>
+	
+</template>

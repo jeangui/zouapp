@@ -4,7 +4,8 @@
 // Publie toutes les annonces actives dans le quartier
 Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 	console.log("# Publication annonces actives ...");
-	console.log(" mon identifiant : " + this.userId() );
+	//console.log(" mon identifiant : " + this.userId() );
+	console.log(" mon identifiant : " + this.userId );
 	console.log(" mon emplacement : " + mon_emplacement );
 
 
@@ -26,12 +27,14 @@ Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 // Publie toutes les annonces actives dans le quartier
 Meteor.publish('c_transactions_actives', function () {
 
-	console.log(" mon identifiant : " + this.userId() );
-	var lesTransactions = Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId() } , {acteur: this.userId() } ] } );
+	//console.log(" mon identifiant : " + this.userId() );
+	console.log(" mon identifiant : " + this.userId );
+	//var lesTransactions = Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId() } , {acteur: this.userId() } ] } );
+	var lesTransactions = Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId } , {acteur: this.userId } ] } );
 
-	/*
 	console.log("transac count : " + lesTransactions.count() );
 
+	/*
 	lesTransactions.forEach(function (transac) {
 	  	var annon = Annonces.findOne( { _id : transac.annonce });
 

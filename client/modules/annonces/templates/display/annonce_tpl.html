@@ -6,11 +6,15 @@
 				{{#if currentUser}}
 					{{#if de_l_utilisateur createur}}
 					<div class="entete-annonce-suppression">
-						Supprimer
+						<a href="#" rel="tooltip" title="pour supprimer votre annonce.">
+							<img src="trash.png" alt="" height="30" width="30">
+						</a>
 					</div>
 					{{else}}
 					<div class="entete-annonce-spam">
-						<img src="spam.gif" alt="" height="30" width="30">
+						<a href="#" rel="tooltip" title="signaler un abus, un spam.">
+							<img src="spam.gif" alt="" height="30" width="30">
+						</a>
 					</div>
 					{{/if}}				
 				{{/if}}
@@ -22,11 +26,15 @@
 				{{#if currentUser}}
 					{{#if de_l_utilisateur createur}}
 						<div class="entete-annonce-modification">
-							Modifier
+							<a href="#" rel="tooltip" title="modifier votre annonce.">
+								<img src="edit.png" alt="" height="30" width="30">
+							</a>
 						</div>
 						{{else}}
 						<div class="entete-annonce-check" id="{{_id}}">
-							<img src="check2.png" alt="" height="30" width="30">
+							<a href="#" rel="tooltip" title="cette annonce vous intéresse.">
+								<img src="check2.png" alt="" height="30" width="30">
+							</a>
 						</div>
 					{{/if}}				
 				{{/if}} 

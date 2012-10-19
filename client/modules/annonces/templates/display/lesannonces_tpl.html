@@ -1,4 +1,5 @@
 <template name="lesannonces_tpl">
+
 	<div class="container" id="filtre_marche">
 		<div class="well" style="background-image: url('/background-tito-btn-grey.png');">
 			<div>
@@ -22,6 +23,7 @@
 		    </div>
 		</div>		
 	</div>
+	{{> lesannonces_theme_filter_tpl}}
 	{{#each ctx_lesannonces}}
 		{{> annonce_tpl}}
 	{{/each}}

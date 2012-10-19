@@ -24,11 +24,16 @@ Template.annonce_tpl.events = {
 
 	$('#ongletsTab a[href="#tabs1-pane3"]').tab('show');
 
-	/*
-	$('#notification').notify({
-	    message: { text: 'Aw yeah, It works!' }
-	  }).show();
-	*/
+  },
+
+  'click .entete-annonce-suppression': function () {
+	
+  		alert("id : " + this._id );
+  		//var annonce_choisie = Annonces.findOne( { _id : this._id });
+
+
+	Annonces.remove( { _id: this._id } );
+
 
   }
 

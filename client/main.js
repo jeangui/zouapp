@@ -69,6 +69,13 @@ console.log('session loc avant subscription : ' + Session.get('loc') );
     Session.set('mesServiceSelected', true );
     Session.set('mesBienSelected', true );
 
+    /* selection filtre onglet lestransactions */
+    Session.set('transacDemandeSelected', true );
+    Session.set('transacOffreSelected', true );
+    Session.set('transacInfoSelected', true );
+    Session.set('transacServiceSelected', true );
+    Session.set('transacBienSelected', true );
+
 
     /* Durée de vie d'une annonce */
     Session.set('AnnonceDureeVieStandard', 15 );

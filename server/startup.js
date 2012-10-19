@@ -77,7 +77,7 @@ Meteor.startup(function () {
 		statut: 		"active",
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
-		themes: 		["jardinerie"],
+		themes: 		["soin", "medical", "Infirmière"],
 		emplacement:		{ lat : 43.1633, lon: 5.388383 },
 		createur: 		"1d5f6b5a-3383-47ac-8511-8d867825d1e7",
 		start_date: 		new Date("2012,06,08,18:30:00"),
@@ -92,7 +92,7 @@ Meteor.startup(function () {
 		statut: 		"active",
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
-		themes: 		["jardinerie"],
+		themes: 		["soin", "medical", "Infirmière"],
 		emplacement:		{ lat : 43.1633, lon: 5.388383 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
@@ -107,7 +107,7 @@ Meteor.startup(function () {
 		statut: 		"active",
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
-		themes: 		["jardinerie"],
+		themes: 		["voiture","vente"],
 		emplacement:		{ lat : 43.1633, lon: 5.388383 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
@@ -123,7 +123,7 @@ Meteor.startup(function () {
 		statut: 		"active",
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
-		themes: 		["jardinerie"],
+		themes: 		["jeux","loisir"],
 		emplacement:		{ lat : 43.1633, lon: 5.388383 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
@@ -138,7 +138,8 @@ Meteor.startup(function () {
   }
 
   console.log('Création de l\'index 2d');
-  Annonces._driver.mongo.db.ensureIndex("c_annonces",{ emplacement : "2d" });
+  //Annonces._driver.mongo.db.ensureIndex("c_annonces",{ emplacement : "2d" });
+  Annonces._ensureIndex("c_annonces",{ emplacement : "2d" });
 
 });
 
