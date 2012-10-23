@@ -1,7 +1,7 @@
-Template.lesannonces_theme_filter_tpl.ctx_lesannonces_themes = function () {
+Template.mesannonces_theme_filter_tpl.ctx_mesannonces_themes = function () {
   
 
-  var annonces = req_lesannonces();
+  var annonces = req_mesannonces();
 
 
   var theme_infos = [];
@@ -29,10 +29,10 @@ Template.lesannonces_theme_filter_tpl.ctx_lesannonces_themes = function () {
   return theme_infos;
 };
 
-Template.lesannonces_theme_filter_tpl.ctx_lesannonces_theme_text = function () {
+Template.mesannonces_theme_filter_tpl.ctx_mesannonces_theme_text = function () {
   return this.theme || "Tous";
 };
 
-Template.lesannonces_theme_filter_tpl.ctx_lesannonces_selected = function () {
-  return Session.equals('lesannonces_theme_filter', this.theme) ? 'selected' : '';
+Template.mesannonces_theme_filter_tpl.ctx_mesannonces_selected = function () {
+  return Session.equals('mesannonces_theme_filter', this.theme) ? 'selected' : '';
 };

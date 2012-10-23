@@ -101,7 +101,7 @@ Meteor.startup(function () {
 	{
 		titre: 			"Voiture", 
 		description: 	"Voiture a vendre.",
-		image:			"http://www.jepic.org/wp-content/uploads/2012/05/mamie-petrad.jpg",
+		image:			"http://www.masculin.com/images/article/1096-citroen-2cv/citroen-2cv-ba3.jpg",
 		type: 			"bien",
 		objet: 			"demande",
 		statut: 		"active",
@@ -142,25 +142,3 @@ Meteor.startup(function () {
   Annonces._ensureIndex("c_annonces",{ emplacement : "2d" });
 
 });
-
-
-
-  /*
-
-	id annonce (yahoo jgl) : 	FEEBF500-C748-459E-84A0-1E345E38FE2A
-	id user yahoo : 			b71ed377-b930-4f66-8d2d-5ea25a014a59
-	id user google jgl : 		8f898eaf-ea2f-4865-a930-e7d4cd0be878
-
-	{
-		titre: 			"YAHOO-JGL-2",
-		objet: 			"offre",
-		type: 			"bien",
-		description: 	"YAHOO-JGL-2",
-		statut: 		"initiee",
-		date_creation: 	new Date(),
-		createur: 		"b71ed377-b930-4f66-8d2d-5ea25a014a59", 
-		acteur: 		"8f898eaf-ea2f-4865-a930-e7d4cd0be878",
-		annonce: 		"FEEBF500-C748-459E-84A0-1E345E38FE2A"
-	}
-
-  */

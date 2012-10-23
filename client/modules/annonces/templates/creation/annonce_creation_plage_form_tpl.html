@@ -4,13 +4,31 @@
   <div class="control-group">
     <label class="control-label" for="annonces-startdate-input">Date de début</label>
     <div class="controls">
-      <input id="annonces-startdate-input" type="text" placeholder="date de démarrage de l'annonce..."></input>
+      <div class="input-append date" id="annonces-startdate-input-dp" data-date="" data-date-format="dd-mm-yyyy">
+        <input class="span1" id="annonces-startdate-input" size="8" type="text" value="" readonly="" style="font-size: 10px;">
+        <span class="add-on"><i class="icon-calendar"></i></span>
+      </div>
+      <div class="input-append bootstrap-timepicker-component" style="display: inline-block;">
+        <input type="text" id="annonces-starttime-input" class="timepicker-default input-small"  style="font-size: 10px;">
+        <span class="add-on">
+          <i class="icon-time"></i>
+        </span>
+      </div>
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="annonces-enddate-input">Date de fin</label>
     <div class="controls">
-      <input id="annonces-enddate-input" type="text" placeholder="date de fin de l'annonce..."></input>
+      <div class="input-append date" id="annonces-enddate-input-dp" data-date="" data-date-format="dd-mm-yyyy">
+        <input class="span1" id="annonces-enddate-input" size="8" type="text" value="" readonly="" style="font-size: 10px;">
+        <span class="add-on"><i class="icon-calendar"></i></span>
+      </div>
+      <div class="input-append bootstrap-timepicker-component" style="display: inline-block;">
+        <input type="text" id="annonces-endtime-input" class="timepicker-default input-small"  style="font-size: 10px;">
+        <span class="add-on">
+          <i class="icon-time"></i>
+        </span>
+      </div>
     </div>
   </div>
   {{/constant}}

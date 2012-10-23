@@ -1,5 +1,5 @@
 Template.annonce_tpl.distance = function () {
-      console.log("-- Template.annonce_tpl.distance --");
+      //console.log("-- Template.annonce_tpl.distance --");
 
       var position = { 
 	      	"lat" :  Session.get('latitude'),
@@ -12,14 +12,14 @@ Template.annonce_tpl.distance = function () {
 
 
 Template.annonce_tpl.formatDate = function ( date ) {
-      console.log("-- Template.annonce_tpl.formatDate --");
+      //console.log("-- Template.annonce_tpl.formatDate --");
 
       return moment( date ).format('LLLL');
     };
 
 
 Template.annonce_tpl.tempsRestant = function ( date ) {
-      console.log("-- Template.annonce_tpl.tempsRestant --");
+      //console.log("-- Template.annonce_tpl.tempsRestant --");
 
       var dureeStandard = Session.get('AnnonceDureeVieStandard');
       var dateFin = moment( date ).add('days', dureeStandard );
@@ -31,7 +31,7 @@ Template.annonce_tpl.tempsRestant = function ( date ) {
 
 
 Template.annonce_tpl.de_l_utilisateur = function ( createurAnnonce ) {
-      console.log("-- Template.annonce_tpl.de_l_utilisateur --");
+      //console.log("-- Template.annonce_tpl.de_l_utilisateur --");
 
       var monuser = Meteor.user();
       

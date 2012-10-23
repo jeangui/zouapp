@@ -1,0 +1,9 @@
+<template name="mesannonces_theme_filter_tpl">
+  <div id="mesannonces-theme-filter" class="mesannonces-theme-list">
+    {{#each ctx_mesannonces_themes}}
+      <div class="theme {{selected}}">
+        {{ctx_mesannonces_theme_text}} <span class="count">({{count}})</span>
+      </div>
+    {{/each}}
+  </div>
+</template>

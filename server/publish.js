@@ -8,6 +8,10 @@ Meteor.publish('c_annonces_actives', function (mon_emplacement) {
 	console.log(" mon identifiant : " + this.userId );
 	console.log(" mon emplacement : " + mon_emplacement );
 
+	/*
+	* IL FAUDRA RECUPERER LES THEMES DE L'UTILISATEUR SI IL EST LOGGE ET FILTRER PAR RAPPORT A CES THEMES.
+	*/
+
 
 	if (mon_emplacement != null) {
 		console.log("\t longitude : " + mon_emplacement.lon );
@@ -33,22 +37,6 @@ Meteor.publish('c_transactions_actives', function () {
 	var lesTransactions = Transactions.find({ statut: {$ne : 'archivee' } , $or: [ { createur: this.userId } , {acteur: this.userId } ] } );
 
 	console.log("transac count : " + lesTransactions.count() );
-
-	/*
-	lesTransactions.forEach(function (transac) {
-	  	var annon = Annonces.findOne( { _id : transac.annonce });
-
-	  	console.log("annon._id : " + annon._id );
-	  	console.log("annon.titre : " + annon.titre );
-	  	console.log("annon.objet : " + annon.objet );
-	  	console.log("annon.type : " + annon.type );
-	  	console.log("annon.description : " + annon.description );
-	  	console.log("annon.createur : " + annon.createur );
-	  	transac.annonce = annon._id;
-	  	transac.titre = annon.titre;
-	  	transac.objet = annon.objet;
-	});
-	*/
 
 	return lesTransactions;
 });

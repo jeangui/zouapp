@@ -22,3 +22,11 @@ function getDistance(a, b) {
   };
 
 
+function trimArr ( arr )
+{
+	for (var i=0;i<arr.length;i++)
+	{ 
+		arr[i] = arr[i].replace(/^\s+|\s+$/g,'');
+	}
+	return arr;
+}
