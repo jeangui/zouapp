@@ -35,3 +35,5 @@ Template.lesannonces_tpl.ctx_lesannonces = function () {
 
   	return Session.get('marcheBienSelected');
   };
+
+

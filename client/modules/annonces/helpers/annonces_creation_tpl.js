@@ -26,9 +26,9 @@ Template.annonce_creation_tpl.ctx_username = function () {
   Template.annonce_creation_plage_form_tpl.rendered  = function () {
 
     //alert( $('#annonces-startdate-input-dp') );
-    $('#annonces-startdate-input-dp').datepicker();
-    $('#annonces-enddate-input-dp').datepicker();
-    $('.timepicker-default').timepicker();
+    $('#annonces-startdate-input-dp').datepicker({format: 'yyyy-mm-dd'});
+    $('#annonces-enddate-input-dp').datepicker({format: 'yyyy-mm-dd'});
+    $('.timepicker-default').timepicker({showMeridian: false});
 
   }
 

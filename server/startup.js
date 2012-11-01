@@ -6,6 +6,9 @@ Meteor.startup(function () {
   if (Annonces.find().count() === 0) {
 
   	console.log( ' Startup : O Annonces donc création d \'annonces');
+  	 //5.3879418
+  	 //43.26180069999999
+
 
     var data = [
       	{
@@ -18,7 +21,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["babysitting"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618006, lon: 5.3879418 },
 		createur: 		"1d5f6b5a-3383-47ac-8511-8d867825d1e7",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -33,7 +36,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["babysitting"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618007, lon: 5.3879418 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -48,7 +51,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["babysitting"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618005, lon: 5.3879418 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -63,7 +66,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["jardinerie"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618004, lon: 5.3879418 },
 		createur: 		"1d5f6b5a-3383-47ac-8511-8d867825d1e7",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -78,7 +81,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["soin", "medical", "Infirmière"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618008, lon: 5.3879418 },
 		createur: 		"1d5f6b5a-3383-47ac-8511-8d867825d1e7",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -93,7 +96,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["soin", "medical", "Infirmière"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618002, lon: 5.3879418 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -108,7 +111,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["voiture","vente"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618001, lon: 5.3879418 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -124,7 +127,7 @@ Meteor.startup(function () {
 		date_creation: 		new Date(),
 		echeance: 		new Date("2012,06,07,12:00:00"),
 		themes: 		["jeux","loisir"],
-		emplacement:		{ lat : 43.1633, lon: 5.388383 },
+		emplacement:		{ lat : 43.2618009, lon: 5.3879418 },
 		createur: 		"1898698760986098",
 		start_date: 		new Date("2012,06,08,18:30:00"),
 		end_date: 		new Date("2012,06,08,00:30:00"),
@@ -139,6 +142,6 @@ Meteor.startup(function () {
 
   console.log('Création de l\'index 2d');
   //Annonces._driver.mongo.db.ensureIndex("c_annonces",{ emplacement : "2d" });
-  Annonces._ensureIndex("c_annonces",{ emplacement : "2d" });
+  Annonces._ensureIndex("c_annonces",{ emplacement : "2d" , statut : 1 });
 
 });

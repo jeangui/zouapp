@@ -53,3 +53,6 @@ Template.annonce_tpl.de_l_utilisateur = function ( createurAnnonce ) {
       };
       
     };
+
+
+  

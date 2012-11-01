@@ -22,7 +22,7 @@ function getDistance(a, b) {
   };
 
 
-function trimArr ( arr )
+function trimArr( arr )
 {
 	for (var i=0;i<arr.length;i++)
 	{ 
