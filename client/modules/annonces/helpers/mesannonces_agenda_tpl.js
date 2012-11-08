@@ -1,11 +1,11 @@
 
 
-  Template.lesannonces_agenda_tpl.rendered = function () {
+  Template.mesannonces_agenda_tpl.rendered = function () {
 
   //alert( $('#calendar') );
   console.log(" ~~~~~~~~ >>> Agenda rendering " );
   
-  $('#lesannonces_calendar').fullCalendar({
+  $('#mesannonces_calendar').fullCalendar({
         header: {
             left: 'prev,next today',
             center: 'title',
@@ -22,7 +22,7 @@
     });
 
 
-  var annonces = req_lesannonces();
+  var annonces = req_mesannonces();
     annonces.forEach( function (anon) {
           console.log('~~~>> anon titre : ' + anon.titre );
           /*
@@ -66,7 +66,7 @@
               end: endDate 
             };
 
-          $('#lesannonces_calendar').fullCalendar('renderEvent', currEvent , true ); 
+          $('#mesannonces_calendar').fullCalendar('renderEvent', currEvent , true ); 
 
           
         });

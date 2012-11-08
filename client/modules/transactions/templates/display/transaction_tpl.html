@@ -1,19 +1,102 @@
 <template name="transaction_tpl">
 
 	<li class="span10" style="margin-top: 5px;margin-bottom: 5px;margin-left: 30px;margin-right: 5px;">
-		<div class="thumbnail">
-			<ul>
-				<li>Titre annonce : {{titre}}</li>
-				<li>Objet annonce : {{objet}}</li>
-				<li>Type annonce : {{type}}</li>
-				<li>Description annonce : {{description}}</li>
-				<li>Statut transaction : {{statut}}</li>
-				<li>Createur annonce : {{createur}}</li>
-				<li>Acteur transaction : {{acteur}}</li>
-				<li>Ranking acteur transaction</li>
-				<li>Date de création de la transaction : {{formatDate date_creation}}</li>
-				<li>Nombre de transactions par statut sur la même annonce</li>
-			</ul>
+		<div class="thumbnail thumbnail-transaction">
+
+
+				<div class="thumbnail thumbnail-annonce span4">
+					<div class="entete-annonce">
+						<div class="entete-annonce-titre">
+							{{titre}}
+						</div>
+					</div>
+
+					<hr/>
+					
+
+					<div class="tabbable tabs-left">
+					  <ul class="nav nav-tabs span1">
+					  	<li class="active"><a href="#{{_id}}1" data-toggle="tab"><i class="icon-info-sign icon-white"></i><!--Info--></a></li>
+					    <li><a href="#{{_id}}2" data-toggle="tab"><i class="icon-calendar icon-white"></i><!--Quand ?--></a></li>
+					    <li><a href="#{{_id}}3" data-toggle="tab"><i class="icon-road icon-white"></i><!--Où ?--></a></li>
+					    <li><a href="#{{_id}}4" data-toggle="tab"><i class="icon-tags icon-white"></i><!--Thèmes ?--></a></li>
+					    <li><a href="#{{_id}}5" data-toggle="tab"><i class="icon-user icon-white"></i><!--Qui ?--></a></li>
+					    <li><a href="#{{_id}}6" data-toggle="tab"><i class="icon-eye-open icon-white"></i><!--Statut ?--></a></li>
+					    <li><a href="#{{_id}}7" data-toggle="tab"><i class="icon-asterisk icon-white"></i><!--Plateforme--></a></li>
+					  </ul>
+					  <div class="tab-content span2">
+					  	 <div class="tab-pane active" id="{{_id}}1">
+					  	 	<img src="{{image}}" alt="" height="80" width="80" style="margin-bottom:10px;" class="img-polaroid">
+					  	 	<div style="font-size: 10px;">
+								<p>{{description}}</p>
+							</div>
+					  	 </div>
+					    <div class="tab-pane" id="{{_id}}2">
+					    	<div style="font-size: 10px;">
+				    			<ul>
+					    			{{#if start_date}}<li>Date de démarrage : {{formatDate start_date}}</li>{{/if}}
+									{{#if end_date}}<li>Date de fin : {{formatDate end_date}}</li>{{/if}}
+									{{#if echeance}}<li>Echeance : {{formatDate echeance}}</li>{{/if}}							
+								</ul>
+							</div>
+					    </div>
+					    <div class="tab-pane" id="{{_id}}3">
+					    	<div style="font-size: 10px;">
+					    		<div class="strong">Emplacement : </div>
+					    		<ul>
+									<li>Latitude : {{emplacement.lat}}</li>
+									<li>Longitude : {{emplacement.lon}}</li>
+									<li>Distance : {{distance}} mètres</li>
+								</ul>			    		
+					    	</div>
+					    </div>
+					    <div class="tab-pane" id="{{_id}}4">
+					    	<div style="font-size: 10px;">
+					    		themes : 
+					    		{{#each themes}}
+									<span class="label label-info">{{this}}</span>
+								{{/each}}
+					    	</div>
+					    </div>
+					    <div class="tab-pane" id="{{_id}}5">
+					    	<div style="font-size: 10px;">
+					    		<p>createur : {{createur}}</p>
+					    	</div>
+					    </div>
+					    <div class="tab-pane" id="{{_id}}6">
+					    	<div style="font-size: 10px;">
+								nombre de personnes intéressées : 0
+							</div>
+					    </div>
+					    <div class="tab-pane" id="{{_id}}7">
+					    	<div style="font-size: 10px;">
+					    		<ul>
+							    	<li>créé le : {{formatDate date_creation}}</li>
+							    	<li>Temps restant : {{tempsRestant date_creation}}</li>
+									<li>statut : {{statut}}</li>
+									<li>type : {{type}}</li>
+									<li>objet : {{objet}}</li>
+									<li>id : {{_id}}</li>
+								</ul>
+							</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+
+			<div style="display:inline;">
+				<ul>
+					<li>Objet annonce : {{objet}}</li>
+					<li>Type annonce : {{type}}</li>
+					<li>Description annonce : {{description}}</li>
+					<li>Statut transaction : {{statut}}</li>
+					<li>Createur annonce : {{createur}}</li>
+					<li>Acteur transaction : {{acteur}}</li>
+					<li>Ranking acteur transaction</li>
+					<li>Date de création de la transaction : {{formatDate date_creation}}</li>
+					<li>Nombre de transactions par statut sur la même annonce</li>
+				</ul>
+			</div>
 		</div>	
 	</li>
 

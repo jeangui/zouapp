@@ -25,11 +25,20 @@ Template.annonce_creation_tpl.ctx_username = function () {
 
   Template.annonce_creation_plage_form_tpl.rendered  = function () {
 
-    //alert( $('#annonces-startdate-input-dp') );
-    $('#annonces-startdate-input-dp').datepicker({format: 'yyyy-mm-dd'});
-    $('#annonces-enddate-input-dp').datepicker({format: 'yyyy-mm-dd'});
+    $('.annonces-date-input').datepicker({format: 'yyyy-mm-dd'} );
+    $('.annonces-date-input').datepicker('setValue', new Date() );
+
+
     $('.timepicker-default').timepicker({showMeridian: false});
 
   }
 
 
+Template.annonce_creation_echeance_form_tpl.rendered  = function () {
+
+    $('.annonces-echeance-input').datepicker({format: 'yyyy-mm-dd'} );
+    $('.annonces-echeance-input').datepicker('setValue', new Date() );
+
+    $('.timepicker-default').timepicker({showMeridian: false});
+
+  }

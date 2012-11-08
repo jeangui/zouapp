@@ -1,14 +1,14 @@
 <template name="annonce_creation_geo_form_tpl">
 	
 	<div class="control-group">
-		<label class="control-label" for="annonces-emplacement-latitude-input">Emplacement</label>
+		<label class="control-label" for="annonces-emplacement-latitude-input">Latitude</label>
 		<div class="controls">
 			<input id="annonces-emplacement-latitude-input" type="text" value="{{#if location}}{{location.lat}}{{/if}}" placeholder="{{#if location}}{{location.lat}}{{/if}}"></input>
 		</div>
 	</div>
 
 	<div class="control-group">
-		<label class="control-label" for="annonces-emplacement-longitude-input">Emplacement</label>
+		<label class="control-label" for="annonces-emplacement-longitude-input">Longitude</label>
 		<div class="controls">
 			<input id="annonces-emplacement-longitude-input" type="text" placeholder="{{#if location}}{{location.lon}}{{/if}}" value="{{#if location}}{{location.lon}}{{/if}}"></input>
 		</div>

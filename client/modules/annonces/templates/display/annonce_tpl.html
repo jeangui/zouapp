@@ -1,6 +1,6 @@
 <template name="annonce_tpl">
 	<li class="span4">
-		<div class="thumbnail">
+		<div class="thumbnail thumbnail-annonce">
 			<div class="entete-annonce">
 
 				{{#if currentUser}}
@@ -63,9 +63,9 @@
 			    <div class="tab-pane" id="{{_id}}2">
 			    	<div style="font-size: 10px;">
 		    			<ul>
-			    			<li>Date de démarrage : {{formatDate start_date}}</li>
-							<li>Date de fin : {{formatDate end_date}}</li>
-							<li>Echeance : {{formatDate echeance}}</li>							
+			    			{{#if start_date}}<li>Date de démarrage : {{formatDate start_date}}</li>{{/if}}
+							{{#if end_date}}<li>Date de fin : {{formatDate end_date}}</li>{{/if}}
+							{{#if echeance}}<li>Echeance : {{formatDate echeance}}</li>{{/if}}							
 						</ul>
 					</div>
 			    </div>

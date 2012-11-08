@@ -4,9 +4,15 @@ Template.bigformulaire_tpl.events = {
 	var titre = $("#demandeInformationModal #annonces-titre-input").val();
     var description = $("#demandeInformationModal #annonces-description-input").val();
     var urlimage = $("#demandeInformationModal #annonces-image-input").val();
+
     //var datedebut = $("#demandeInformationModal #annonces-startdate-input").val();
     //var datefin = $("#demandeInformationModal #annonces-enddate-input").val();
-    var echeance = $("#demandeInformationModal #annonces-echeance-input").val();
+    //var echeance = $("#demandeInformationModal #annonces-echeance-input").val();
+    var echeanceDate = $("#demandeInformationModal #annonces-echeancedate-input").val();
+    var echeanceTime = $("#demandeInformationModal #annonces-echeancetime-input").val();
+    var echeanceDateTimeString = echeanceDate + "T" + echeanceTime;
+    var echeanceDateTime = moment( echeanceDateTimeString , "YYYY-MM-DDTHH:mm");
+
 
     var themes = trimArr( $("#demandeInformationModal #annonces-themes-input").val().split(",") );    
 
@@ -27,7 +33,7 @@ Template.bigformulaire_tpl.events = {
         objet:          "demande",
         statut:         statut,
         date_creation:  new Date(),
-        echeance:       new Date("2012,06,07,12:00:00"),
+        echeance:       new Date( echeanceDateTime.valueOf() ), 
         themes:         themes,
         emplacement:    { lat : parseFloat(latitude), lon : parseFloat(longitude) },
         createur:       Meteor.user()._id//,
@@ -54,7 +60,13 @@ Template.bigformulaire_tpl.events = {
     var urlimage = $("#offreInformationModal #annonces-image-input").val();
     //var datedebut = $("#offreInformationModal #annonces-startdate-input").val();
     //var datefin = $("#offreInformationModal #annonces-enddate-input").val();
-    var echeance = $("#offreInformationModal #annonces-echeance-input").val();
+    //var echeance = $("#offreInformationModal #annonces-echeance-input").val();
+
+    var echeanceDate = $("#offreInformationModal #annonces-echeancedate-input").val();
+    var echeanceTime = $("#offreInformationModal #annonces-echeancetime-input").val();
+    var echeanceDateTimeString = echeanceDate + "T" + echeanceTime;
+    var echeanceDateTime = moment( echeanceDateTimeString , "YYYY-MM-DDTHH:mm");
+
     var themes = trimArr( $("#offreInformationModal #annonces-themes-input").val().split(",") );
     var latitude = $("#offreInformationModal #annonces-emplacement-latitude-input").val();
     var longitude = $("#offreInformationModal #annonces-emplacement-longitude-input").val();
@@ -72,7 +84,7 @@ Template.bigformulaire_tpl.events = {
         objet:          "offre",
         statut:         statut,
         date_creation:  new Date(),
-        echeance:       new Date("2012,06,07,12:00:00"),
+        echeance:       new Date( echeanceDateTime.valueOf() ), 
         themes:         themes,
         emplacement:    { lat : parseFloat(latitude), lon : parseFloat(longitude) },
         createur:       Meteor.user()._id//,
@@ -148,7 +160,8 @@ Template.bigformulaire_tpl.events = {
     var datefinDate = $("#offreServiceModal #annonces-enddate-input").val();
     var datefinTime = $("#offreServiceModal #annonces-endtime-input").val();
     var dateFinString = datefinDate + "T" + datefinTime;
-    var endDate = moment( dateFinString , "YYYY-MM-DDTHH:mm");//var echeance = $("#offreServiceModal #annonces-echeance-input").val();
+    var endDate = moment( dateFinString , "YYYY-MM-DDTHH:mm");
+    //var echeance = $("#offreServiceModal #annonces-echeance-input").val();
     var themes = trimArr( $("#offreServiceModal #annonces-themes-input").val().split(",") );
     var latitude = $("#offreServiceModal #annonces-emplacement-latitude-input").val();
     var longitude = $("#offreServiceModal #annonces-emplacement-longitude-input").val();
@@ -166,12 +179,12 @@ Template.bigformulaire_tpl.events = {
         objet:          "offre",
         statut:         statut,
         date_creation:  new Date(),
-        echeance:       new Date("2012,06,07,12:00:00"),
+        //echeance:       new Date("2012,06,07,12:00:00"),
         themes:         themes,
         emplacement:    { lat : parseFloat(latitude), lon : parseFloat(longitude) },
         createur:       Meteor.user()._id,
-        start_date:     new Date("2012,06,08,18:30:00"),
-        end_date:       new Date("2012,06,08,00:30:00"),
+        start_date:     new Date( startDate.valueOf() ),
+        end_date:       new Date( endDate.valueOf() )
     };
 
     Annonces.insert(annonce);
@@ -212,7 +225,7 @@ Template.bigformulaire_tpl.events = {
         emplacement:    { lat : parseFloat(latitude), lon : parseFloat(longitude) },
         createur:       Meteor.user()._id//,
         //start_date:     new Date("2012,06,08,18:30:00"),
-        //end_date:       new Date("2012,06,08,00:30:00"),
+        //end_date:       new Date("2012,06,08,00:30:00")
     };
     
     Annonces.insert(annonce);
@@ -253,7 +266,7 @@ Template.bigformulaire_tpl.events = {
         emplacement:    { lat : parseFloat(latitude), lon : parseFloat(longitude) },
         createur:       Meteor.user()._id//,
         //start_date:     new Date("2012,06,08,18:30:00"),
-        //end_date:       new Date("2012,06,08,00:30:00"),
+        //end_date:       new Date("2012,06,08,00:30:00")
     };
     
     Annonces.insert(annonce);

@@ -23,6 +23,10 @@
 		</div>		
 	</div>
 	{{> mesannonces_theme_filter_tpl}}
+	<div class="row">
+	{{> mesannonces_map_tpl }}
+	{{> mesannonces_agenda_tpl }}
+	</div>
 	{{#each ctx_mesannonces}}
 		{{> annonce_tpl}}
 	{{/each}}
